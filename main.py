@@ -20,7 +20,6 @@ def main():
     out_dir = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
     os.makedirs(out_dir, exist_ok=True)
     # The output must be readable by every user: folder 0755, file 0644.
-    os.chmod(out_dir, 0o755)
     dst = os.path.join(out_dir, "entry.txt")
     with open(dst, "w", encoding="utf-8", newline="") as f:
         f.write(ENTRY)
